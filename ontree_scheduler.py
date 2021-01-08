@@ -81,7 +81,7 @@ async def check_tree(session):
     con.commit()
     con.close()
     return
-@sv.on_command('尾刀')
+@sv.on_command('尾刀', aliases=(r'^尾刀\[CQ:at,qq=(\d+?)\]'))
 async def check_tree(session):
     ctx = session.ctx
     group_id = ctx['group_id']
